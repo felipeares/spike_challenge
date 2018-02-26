@@ -6,20 +6,27 @@ performance ? Entregable: texto/imágenes.
 
 ## Evaluación general
 
-Utilizando la métrica de mínimos cuadrados sobre el dataset de prueba (data_reggaeton.csv) se compararon los distintos modelos trabajados en la pregunta anterior. Se construyeron distintos modelos con distintos parámetros para poder comparar de mejor manera el resultado. El resultado fue el siguiente:
+En la pregunta anterior se construyeron 8 modelos de clasificación (Todos evaluados con distintos seeds de partición de set de entrenamiento y prueba). Sacando el promedio de las matrices de confusión para cada modelo (Tabla generada con las matrices de confusión en [matrices_confusion.csv](https://github.com/felipeares/spike_challenge/tree/master/answer_03/matrices_confusion.csv))
 
-| Modelo        | Error Promedio|
-| ------------- |:-------------:|
-| col 3 is      | right-aligned |
-| col 2 is      | centered      |
-| zebra stripes | are neat      |
+| Modelo        | Positivos OK  | Falsos Positivos | Falsos Negativos | Negativos OK | Falsas Predic.|
+|---------------|---------------|------------------|------------------|--------------|---------------|
+|Random Forest  |         666	|17	               |0	              |4	         |18             |                
+|Red Neuronal   |         660	|15	               |6	              |6	         |22             | 
+|Kernel SVM     |         666	|22	               |0	              |0	         |22             |
+|Regresión Log  |         664	|20	               |2	              |2	         |22             |
+|SVC            |         666	|22	               |0	              |0	         |22             |
+|Árbol de Dec.  |         656	|12	               |10	              |10	         |22             |
+|KNN            |         664	|20	               |3	              |2	         |23             |
+|Naive Bayes    |         524	|4	               |142	              |18	         |146            |
 
-Selecionaremos entonces como modelo final la regresión lineal debido a que obtuvo el menor error en mínimos cudrados.
 
-## Archivos
+Selecionaremos entonces como modelo final el Random Forest debido a que obtuvo el menor número de falsas predicciones.
 
-Se puede revisar el código en [evaluation.py](http://www.google.com)
+## Archivo
+
+La creación de estás métricas y tablas de comparación se puede ver en el archivo [models.py](https://github.com/felipeares/spike_challenge/tree/master/answer_03/models.py)
+
 
 ## Mejoras
 
-El modelo podría mejorar incorporando ayor volumen de datos o nuevas columnas con informción adicional de las distintas canciones.
+...
