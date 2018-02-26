@@ -29,7 +29,7 @@ La tabla de data_reggaeton no presenta datos nulos. La tabla data_todotipo prese
 |tempo	        |118.34	|105.91	|28.53	|28.55	|44%    |
 |duration	    |233,872|275,646|77,944	|257,543|-54%   |
 
-3. De la tabla se concluye que existen notorias diferenciasd entre ambos archivos, sobre todo en variables como danceability, speechiness, valence, energy e instrumentaln.
+3. De la tabla se concluye que existen notorias diferencias entre ambos archivos, sobre todo en variables como danceability, speechiness, valence, energy e instrumentaln.
 
 ## Distribución
 

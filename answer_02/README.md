@@ -5,8 +5,10 @@ reggaeton en base a los datasets. Entregable: csv con dataset y código (si es q
 
 ## Construcción del archivo
 
-En el archivo [output.csv](http://www.google.com) se puede ver el consolidado de ambos dataset, incluída una nueva columna llamada es_reggaeton. 
+En el archivo [output.csv](https://github.com/felipeares/spike_challenge/tree/master/answer_02/output.csv) se puede ver el consolidado de ambos dataset, incluida una nueva columna llamada es_reggaeton. 
 
 La construcción se realizó en Python con las librerías Pandas y NumPy. Se entiende que por el volumen menor de los datos se pudo haber realizado en mucho menos tiempo en excel, pero la idea es construir un algoritmo que funcione independiente del tamaño de los archivos.
 
-El código que arma el output.csv se puede encontrar en [merge.py](http://www.google.com)
+Se aprovechó además de eliminar la columna de time_signature y quitar las filas NA
+
+El código que arma el output.csv se puede encontrar en [merge.py](https://github.com/felipeares/spike_challenge/tree/master/answer_02/merge.py)
