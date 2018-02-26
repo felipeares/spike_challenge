@@ -6,7 +6,7 @@ performance ? Entregable: texto/imágenes.
 
 ## Evaluación general
 
-En la pregunta anterior se construyeron 8 modelos de clasificación (Todos evaluados con distintos seeds de partición de set de entrenamiento y prueba). Sacando el promedio de las matrices de confusión para cada modelo (Tabla generada con las matrices de confusión en [matrices_confusion.csv](https://github.com/felipeares/spike_challenge/tree/master/answer_03/matrices_confusion.csv))
+En la pregunta anterior se construyeron 8 modelos de clasificación (Todos evaluados con 9 distintos seeds de partición de set al 30% de entrenamiento y prueba). Sacando el promedio de las matrices de confusión para cada modelo (Tabla generada con las matrices de confusión en [matrices_confusion.csv](https://github.com/felipeares/spike_challenge/tree/master/answer_03/matrices_confusion.csv))
 
 | Modelo        | Positivos OK  | Falsos Positivos | Falsos Negativos | Negativos OK | Falsas Predic.|
 |---------------|---------------|------------------|------------------|--------------|---------------|
@@ -29,4 +29,9 @@ La creación de estás métricas y tablas de comparación se puede ver en el arc
 
 ## Mejoras
 
-...
+1. Probar con distintos parámetros de SVM (Transformaciones)
+2. Probar con más capas y distintos set de neuronas en la red neuronal
+3. Intentar obtener un set mayor
+4. Probar con distintos parámetros de vecinos en el KNN
+5. Probar con modelos de regresión llevando el output a una probabilidad de ser reggaeton
+6. Utilizar "cumulative accuracy profile" para analizar mejor los modelos

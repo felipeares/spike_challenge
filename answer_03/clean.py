@@ -12,6 +12,7 @@ output_csv = output_csv.drop('Unnamed: 0', 1)
 # Pasar categóricas a dummies. En este caso sólo 'key' por que 'mode' ya vive
 # en ceros y unos
 output_csv = pd.concat([output_csv, pd.get_dummies(output_csv['key'], prefix='key_', drop_first = True)], axis=1)
+output_csv = output_csv.drop('key', 1)
 
 # Crear json que guardará medias y desviaciones para normailzar a modo de
 # reutilizar en modelos en producción
@@ -20,6 +21,7 @@ normalization['mean'] = output_csv.describe().loc['mean'].to_dict()
 normalization['std'] = output_csv.describe().loc['std'].to_dict()
 with open('./normalization.json', 'w') as outfile:
     json.dump(normalization, outfile)
+
 
 # Normalizar la Matriz
 for column in output_csv:

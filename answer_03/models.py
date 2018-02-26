@@ -192,9 +192,9 @@ def redNeuronal(neuronas = 6, save = False):
     modelo = Sequential()
     
     # Primera capa de input
-    modelo.add(Dense(neuronas, init='uniform', activation = 'relu', input_dim = 24))
+    modelo.add(Dense(neuronas, init='uniform', activation = 'relu', input_dim = 23))
     
-    modelo.add(Dense(output_dim = neuronas, init = 'uniform', activation = 'relu'))
+    #modelo.add(Dense(output_dim = neuronas, init = 'uniform', activation = 'relu'))
     
     modelo.add(Dense(output_dim = 1, init = 'uniform', activation = 'sigmoid'))
     
@@ -211,7 +211,27 @@ def redNeuronal(neuronas = 6, save = False):
     # Obtener error
     obtenerError(y_pred, y_test, modelo = 'RNA', params = str(neuronas))
     
+    # Guardar
+    if save:
+        modelo.save('./saved_models/modelo_RNA.pkl') 
+    
     return y_pred
+
+
+
+"""
+# Pruebas de parámetros varios
+for i in range(1,50):
+    seed_test = i
+    construirSetsEntrenamientoPruebas(seed = seed_test)
+    modeloKNN(n = i)
+    modeloRandomForest(n = i)
+
+y_pred = redNeuronal(16)
+y_pred = redNeuronal(32)
+y_pred = redNeuronal(64)
+y_pred = redNeuronal(128)
+"""
 
 # PROBAR PROBAR PROBAR
 for i in range(0,10):
@@ -222,19 +242,22 @@ for i in range(0,10):
     y_pred = modeloSVC()
     y_pred = modeloNaiveBayes()
     y_pred = modeloDecisionTree()
-    y_pred = modeloRandomForest(n = 10)
+    y_pred = modeloRandomForest(n = 14)
     y_pred = modeloKernelSVM()
-    y_pred = redNeuronal(12)
+    y_pred = redNeuronal(64)
 
 # Guardar modelos
-seed_test = 10
+seed_test = 1
+construirSetsEntrenamientoPruebas(seed = seed_test)
 y_pred = regresionLog(save = True)
 y_pred = modeloKNN(save = True)
 y_pred = modeloSVC(save = True)
 y_pred = modeloNaiveBayes(save = True)
 y_pred = modeloDecisionTree(save = True)
-y_pred = modeloRandomForest(n = 10, save = True)
+y_pred = modeloRandomForest(n = 14, save = True)
 y_pred = modeloKernelSVM(save = True)
-y_pred = redNeuronal(12)
+y_pred = redNeuronal(12, save = True)
 
+# Guardar los resultados finales
+resultados.to_csv('./matrices_confusion.csv', index = False)
 

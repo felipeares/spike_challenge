@@ -8,5 +8,10 @@ reggaetones? Entregable: texto/imágenes.
 
 ## Selección
 
-Se construyó el archivo [output_final.csv](http://www.google.com) con las distintas filas y su marca (marca_reggaeton) y probabilidad (probabilidad_reggaeton). La marca_reggaeton se construyó tomando todas aquellas probabilidades mayores a 0.5. La predicción de mayores cantidades de reggaetones dependerá exclusivamente del theeshold seleccionado (en este caso 0.5) y de la asertividad del modelo.
+Se construyó el archivo [output_final.csv](https://github.com/felipeares/spike_challenge/tree/master/answer_05/output_final.csv) con las distintas filas y su marca (marca_reggaeton) y probabilidad (probabilidad_reggaeton). La marca_reggaeton se construyó utilizando el modelo de Random Forest seleccionado en la pregunta anterior. Este modelo arroja una clasificación por lo que para construir una variable predictora de la probabilidad de ser reggaeton (probabilidad_reggaeton) se utilizó la red neuronal antes construida.
 
+La construcción del dataset se puede encontrar en [build.py](https://github.com/felipeares/spike_challenge/tree/master/answer_05/build.py)
+
+## Conclusión
+
+En esta actividad se construyó el flujo necesario desde la analítica hasta la construcción del output del set de prueba. Con mayor tiempo y dedicación habría que comenzar a mover los distintos parámetros (entendiendo mejor los datos, su distribución y correlación) para ir mejorando el modelo de predicción. El modelo encontrado está lejos de ser un buen modelo.
