@@ -7,8 +7,6 @@ distribuciones, missing, etc? ¿En qué se diferencian? Entregable: texto/imáge
 
 La tabla de data_reggaeton no presenta datos nulos. La tabla data_todotipo presenta 8 filas con datos nulos "NA", los cuales serán excluidos del análisis.
 
-![Histogramas](https://github.com/felipeares/spike_challenge/tree/master/answer_01/images/histo_data_all.png "Histogramas")
-
 ## Diferencias entre archivos
 
 1. El archivo con reggaeton NO tiene la variable time_signature
@@ -36,3 +34,5 @@ La tabla de data_reggaeton no presenta datos nulos. La tabla data_todotipo prese
 ## Distribución
 
 Entendiendo que se podría hacer un análisis mucho más detallado de las distribuciones de las variables se presenta a continuación sólo una visualización de los histograma de cada una de ellas para el archivo data_todotipo.csv. Se pueden ver varias distribuciones en formato de "cola" y asumir que ninguna tiene una distribución normal.
+
+![Histogramas](/felipeares/spike_challenge/blob/master/answer_01/images/histo_data_all.png "Histogramas")
